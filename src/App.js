@@ -49,8 +49,8 @@ class App extends Component {
 
   calculateFaceLocation = (data) => {
     if (typeof data.outputs[0].data.regions === 'undefined') {
-      return '';
-    }
+      return {};
+    }    
 
     const clarifaiFace = data.outputs[0].data.regions[0].region_info.bounding_box;    
     const image = document.getElementById('inputimage');
